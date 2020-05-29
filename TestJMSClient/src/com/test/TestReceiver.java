@@ -23,7 +23,8 @@ public class TestReceiver {
 			Destination destination = session.createQueue("TestQueue1");
 			MessageConsumer consumer = session.createConsumer(destination); 
 			connection.start();
-			while(true) {
+			while(true) 
+			{
 			TextMessage text  = (TextMessage) consumer.receive();
 			System.out.println(text.getText());
 			}
