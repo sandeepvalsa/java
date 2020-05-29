@@ -3,12 +3,9 @@ package com.test;
 import javax.jms.Connection;
 import javax.jms.Destination;
 import javax.jms.JMSException;
-import javax.jms.Message;
 import javax.jms.MessageConsumer;
 import javax.jms.Session;
 import javax.jms.TextMessage;
-
-import org.apache.activemq.ActiveMQConnectionFactory;
 
 import com.jms.JMSConnectionFactory;
 
@@ -26,7 +23,7 @@ public class TestReceiver {
 			while(true) 
 			{
 			TextMessage text  = (TextMessage) consumer.receive();
-			System.out.println(text.getText());
+			System.out.println("message:" + text.getText());
 			}
 		} catch (JMSException e) {
 			// TODO Auto-generated catch block
