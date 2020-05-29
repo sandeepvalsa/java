@@ -22,7 +22,7 @@ public class TestReceiver {
 			connection.start();
 			while(true) {
 			TextMessage text  = (TextMessage) consumer.receive();
-			System.out.println(text.getText());
+			System.out.println("message:" + text.getText());
 			}
 		} catch (JMSException e) {
 			// TODO Auto-generated catch block
